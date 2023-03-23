@@ -1,0 +1,913 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.img-wrap {
+    position: relative;
+    height: auto;
+    overflow: hidden;
+    background-position: 50% 50%;
+    background-size: cover;
+    padding-top: 56.25%;
+}
+
+.img-wrap img {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 100%;
+    transform: translateZ(0);
+    margin: 0 auto;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    position: absolute;
+    object-position: 50% 50%;
+    object-fit: cover;
+}
+
+.rustico-go{
+    background-image: url(./img/Group\ 811.webp);
+    background-size: cover;
+    padding: 6.5rem 0 0;
+    height: 100vh;
+}
+
+.rustico-go .container{
+    padding: 0;
+    justify-content: space-between;
+}
+
+/* GO */
+/* list-social */
+.rustico-go .list-social{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 2rem;
+}
+
+.rustico-go .list-social ul{
+    padding-left: 0;
+    height: fit-content;
+}
+
+.rustico-go .list-social ul li{
+    list-style: none;
+    margin: 1rem 0;
+}
+
+.rustico-go .list-social ul li a {
+    color: #6F7E5B;
+}
+
+/* rus-name */
+.rustico-go .rus-name{
+    margin: 2rem 2rem 0;
+}
+
+.rustico-go .rus-name .rus-name_img{
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+    width: 124%;  
+    position: relative;
+    z-index: 9  ;
+}
+
+.rustico-go .rus-name .rus-name_img img{
+    width: 100%;
+}
+
+.rustico-go .rus-name .rus-name_title{
+    display: flex;
+    position: relative;
+}
+
+.rustico-go .rus-name .rus-name_title::before{
+    content: url(./img/Rectangle\ 116.png);
+    position: absolute;
+    top: -11%;
+    background: #CAB88B;
+    mix-blend-mode: overlay;
+}
+
+.rustico-go .rus-name .rus-name_title .title-link{
+    position: absolute;
+}
+
+.rustico-go .rus-name .rus-name_title .title-link .title-list li{
+    list-style: none;
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.rustico-go .rus-name .rus-name_title .title-link .title-list li a{
+    color: #F5F5F5;
+    opacity: .7;
+    display: block;
+    width: 8rem;
+    transition: all .5s;
+}
+
+.rustico-go .rus-name .rus-name_title .title-link .title-list li:hover a{
+    text-decoration: none;
+    color: #CAB88B;
+    animation: text-toright .5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes text-toright{
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(10%);
+    }
+}
+
+.rustico-go .rus-name .rus-name_title .title-link .title-list li .line{
+    width: 1rem;
+    height: 0.05rem;
+    background: #CAB88B;
+    transition: all .5s;
+    display: none;
+    color: #CAB88B;
+    margin-right: .2rem;
+}
+
+.rustico-go .rus-name .rus-name_title .title-link .title-list li:hover .line{
+    display: block;
+    animation: tline-toright .5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes tline-toright{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(10px);
+    }
+}
+
+.rustico-go .rus-name .rus-name_title .title-link .title-list li .line::before{
+    content: ".";
+    font-size: 2rem;
+    position: absolute;
+    bottom: -12px;
+    left: -2px;
+}
+
+.rustico-go .rus-name .rus-name_title .title-link .view{
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #f5f5f5;
+    display: flex;
+    width: max-content;
+    align-items: center;
+    gap: .7rem;
+    letter-spacing: -0.05em;
+    position: relative;
+    overflow: hidden;
+    margin: 2rem 1rem;
+}
+.rustico-go .rus-name .rus-name_title .title-link .view .icon{
+    display: block;
+    padding: .2rem 0.7rem;
+    position: relative;
+}
+.rustico-go .rus-name .rus-name_title .title-link .view::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: 0;
+    right: -100%;
+    background: #A93F38;
+    transition: all .2s ease-in-out;
+}
+.rustico-go .rus-name .rus-name_title .title-link .view::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1.2px;
+    bottom: 0;
+    right: -100%;
+    background: #A93F38;
+    transition: all .2s ease-in-out;
+}
+.rustico-go .rus-name .rus-name_title .title-link .view:hover::before,
+.rustico-go .rus-name .rus-name_title .title-link .view:hover::after{
+    right: 0;
+}
+.rustico-go .rus-name .rus-name_title .title-link .view .icon i{
+    position: relative;
+    z-index: 9999;
+}
+.rustico-go .rus-name .rus-name_title .title-link .view:hover .icon i{
+    color: #CAB88B;
+}
+.rustico-go .rus-name .rus-name_title .title-link .view:hover .icon i::before{
+    font-weight: 700 !important;
+}
+.rustico-go .rus-name .rus-name_title .title-link .view .icon::before{
+    position: absolute;
+    height: 100%;
+    content: "";
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid #A93F38;
+    transition: all .2s linear;
+}
+.rustico-go .rus-name .rus-name_title .title-link .view:hover .icon::before{
+    border-left: 30px solid #A93F38
+}
+.rustico-go .rus-name .rus-name_title .title-link .view:hover .icon::after{
+    border-right: 30px solid #A93F38
+}
+.rustico-go .rus-name .rus-name_title .title-link .view .icon::after{
+    position: absolute;
+    height: 100%;
+    transition: all .2s linear;
+    content: "";
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 5px solid #A93F38
+}
+.rustico-go .rus-name .rus-name_title .title-link .view:hover{
+    color: #CAB88B;
+}
+
+/* rus-mid */
+.rustico-go .rus-mid{
+    position: relative;
+    width: 65%;
+}
+
+.rustico-go .rus-mid .rus-mid_img{
+    width: 100%;
+}
+
+.rustico-go .rus-mid .rus-mid_img img{
+    width: 100%;
+}
+
+.rustico-go .rus-mid .rus-mid_ani{
+    position: absolute;
+    left: 68%;
+    bottom: 2%;
+}
+
+.rustico-go .rus-mid .rus-mid_ani img:first-child{
+    position: relative;
+    animation: ani-deg 50s infinite;
+}
+@keyframes ani-deg{
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+.rustico-go .rus-mid .rus-mid_ani img:last-child{
+    position: absolute;
+    bottom: 25%;
+    right: 24.5%;
+}
+
+/* rus-right */
+.rustico-go .rus-right{
+    margin-left: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+
+}
+
+.rustico-go .rus-right .rus-right_top{
+    /* margin: 2rem 0; */
+    width: 100%;
+    position: relative;
+}
+
+.rustico-go .rus-right .rus-right_top img:first-child{
+    width: 80%;
+    margin: 1rem 0;
+}
+
+.rustico-go .rus-right .rus-right_top img:last-child{
+    width: 80%;
+}
+
+.rustico-go .rus-right .rus-right_top::before{
+    content: url(./img/Vector\ 119.webp);
+    position: absolute;
+    top: 24%;
+    right: 17%;
+}
+
+.rustico-go .rus-right .rus-right_top::after{
+    content: url(./img/Vector\ 120.webp);
+    position: absolute;
+    bottom: 5%;
+    left: -2%;
+}
+
+.rustico-go .rus-right .rus-right_bottom span:first-child{
+    color: #F5F5F5;
+    font-weight: 400;
+    display: block;
+    width: 6rem;
+    letter-spacing: 0.3em;
+    transition: all.5s;
+}
+
+.rustico-go .rus-right .rus-right_bottom:hover span:first-child{
+    text-decoration: underline;
+    color: #CAB88B;
+}
+
+.rustico-go .rus-right .rus-right_bottom::before{
+    content: "";
+    width: 150%;
+    height: 0.05rem;   
+    background: #F5F5F5;
+    display: block;
+    position: absolute;
+    top: 82%;
+    opacity: .5;
+}
+
+.rustico-go .rus-right .rus-right_bottom::after{
+    content: ".";
+    width: 100%;
+    height: 0.05rem;
+    font-size: 3rem;   
+    color: #F5F5F5;
+    display: block;
+    position: absolute;
+    bottom: 26.2%;
+    opacity: .5;
+}
+
+.rustico-go .rus-right .rus-right_bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.rustico-go .rus-right .rus-right_bottom span:last-child{
+    color: #F5F5F5;
+    letter-spacing: 0.3em;
+    opacity: .5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rustico-go .rus-right .rus-right_bottom span:last-child::before{
+    content: "";
+    display: block;
+    width: 44%;
+    height: 0.05rem;
+    background: #F5F5F5;
+    position: absolute;
+    left: 106%;
+}
+
+@media (max-width: 992px){
+    .rustico-go{
+        padding: 1.5rem 0 0;
+    }
+
+    .rustico-go .container{
+        flex-wrap: wrap;
+    }
+
+    .rustico-go .list-social{
+        margin-right: 0;
+    }
+
+    .rustico-go .rus-name{
+        width: 38%;
+        margin: 0 2rem 0;
+    }
+
+    .rustico-go .rus-mid{
+        margin: 3rem auto;
+        width: 50%;
+    }
+
+    .rustico-go .rus-name .rus-name_img{
+        width: 150%;
+    }
+
+    .rustico-go .rus-mid .rus-mid_ani{
+        bottom: -6%;
+        left: 65%;
+    }
+
+    .rustico-go .rus-mid .rus-mid_ani img:last-child{
+        bottom: 24%;
+        right: 23.5%;
+    }
+
+    .rustico-go .rus-name .rus-name_title .title-link .view{
+        font-size: 1rem;
+    }
+
+    .rustico-go .rus-right .rus-right_bottom::before{
+        top: 80.4%;
+    }
+
+    .rustico-go .rus-right .rus-right_bottom::after{
+        bottom: 29.8%;
+    }
+
+    .rustico-go .rus-right{
+        margin-left: 3rem;
+        height: 28rem;
+        /* overflow: hidden; */
+    }
+
+    .rustico-go .rus-right .rus-right_top{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .rustico-go .rus-right .rus-right_top img:first-child{
+        margin: 6rem;
+    }
+
+    .rustico-go .rus-right .rus-right_top::before{
+        top: -4%;
+        right: 64%;
+    }
+
+    .rustico-go .rus-right .rus-right_top::after{
+        top: 67%;
+        right: 64%;
+    }
+
+    .rustico-go .rus-right .rus-right_bottom{
+        width: 35%;
+        position: absolute;
+        right: -10%;
+        bottom: 12%;
+    }
+
+    .rustico-go .rus-right .rus-right_bottom::before{
+        top: 51.4%;
+    }
+
+    .rustico-go .rus-right .rus-right_bottom::after{
+        bottom: 154.8%;
+    }
+}
+
+@media (max-width: 541px){
+    .rustico-go{
+        overflow: hidden;
+    }
+
+    .rustico-go .container{
+        padding: 0 1rem;
+    }
+
+    .rustico-go .rus-name{
+        width: 29%;
+        margin: 0px 1rem 0;
+    }
+
+    .rustico-go .rus-name .rus-name_img{
+        margin-top: 4rem;
+        margin-bottom: 2rem;
+    }
+
+    .rustico-go .rus-mid .rus-mid_ani{
+        bottom: 1%;
+        left: 46%;
+    }
+
+    .rustico-go .rus-right{
+        margin-left: 0;
+        height: 9rem;
+        margin: 7rem 0 0;
+    }
+
+    .rustico-go .rus-right .rus-right_top img:first-child {
+        margin: 3rem 0 14rem;
+        width: 35%;
+    }
+
+    .rustico-go .rus-right .rus-right_top img:last-child {
+        width: 46%;
+        height: 16rem;
+        margin-right: 3rem;
+    }
+
+    .rustico-go .rus-right .rus-right_top::before {
+        top: -2%;
+        right: 45%;;
+    }
+
+    .rustico-go .rus-right .rus-right_top::after {
+        top: 53%;
+        right: 0;
+        left: 5%;
+    }
+
+    .rustico-go .rus-right .rus-right_bottom {
+        right: -5%;
+        font-size: 0.6rem;
+        line-height: 2;
+    }
+
+    .rustico-go .rus-right .rus-right_bottom::after{
+        font-size: 2rem;
+        bottom: 156.8%;
+    }
+
+    .rustico-go .rus-name .rus-name_title .title-link .title-list li a{
+        font-size: .8rem;
+    }
+}
+
+/* SCROLL3 */
+.rustico-scroll3{
+    background-image: url(./img/nen\ begie\ chay.webp);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.rustico-scroll3 .scroll3-left{
+    width: 55%;
+    padding: 8rem 0 8rem 8rem;
+}
+
+.rustico-scroll3 .scroll3-left .left-title{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5rem;
+}
+
+.rustico-scroll3 .scroll3-left .left-title .ani-bg{
+    position: relative;
+}
+
+.rustico-scroll3 .scroll3-left .left-title .rus-mid_ani{
+    position: absolute;
+    top: 19%;
+    left: 19%;
+}
+
+.rustico-scroll3 .scroll3-left .left-title .rus-mid_ani img:first-child{
+    position: relative;
+    animation: ani-deg 50s infinite;
+}
+@keyframes ani-deg{
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+.rustico-scroll3 .scroll3-left .left-title p{
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #1f1f1f;
+    letter-spacing: 0.2rem;
+    margin-left: 4rem;
+}
+
+.rustico-scroll3 .scroll3-left .left-title .rus-mid_ani img:last-child{
+    position: absolute;
+    bottom: 25%;
+    right: 24.5%;
+}
+
+.rustico-scroll3 .scroll3-right{
+    width: 45%;
+}
+
+.rustico-scroll3 .scroll3-right .right-img img{
+    width: 100%;
+    height: 100%;
+}
+
+.rustico-scroll3 .scroll3-right .right-img{
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.rustico-scroll3 .scroll3-right .right-img h1{
+    background-image: url(./img/image\ 32\ \(1\).webp);
+    background-size: cover;
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 900;
+    letter-spacing: .8rem;
+    padding: 1rem;
+    width: 130%;
+    color: #CAB88B;
+    position: absolute;
+    bottom: 5rem;
+    right: 0;
+}
+
+@media (max-width: 992px){
+    .rustico-scroll3 .scroll3-left{
+        padding: 8rem 0 8rem 1rem;
+    }
+
+    .rustico-scroll3 .scroll3-left .left-img img{
+        width: 100%;
+    }
+
+    .rustico-scroll3 .scroll3-left .left-title{
+        flex-direction: column;
+    }
+
+    .rustico-scroll3 .scroll3-left .left-title .rus-mid_ani{
+        top: 22%;
+        left: 7%;
+    }
+
+    .rustico-scroll3 .scroll3-left .left-title p{
+        margin-top: 2rem;
+    }
+
+    .rustico-scroll3 .scroll3-right .right-img h1{
+        font-size: 3rem;
+        padding: 2rem;
+        width: 180%;
+        bottom: 8rem;
+    }
+}
+
+@media (max-width: 541px){
+    .rustico-scroll3 .scroll3-left{
+        padding: 1rem;
+    }
+
+    .rustico-scroll3 .scroll3-left .left-img{
+        width: 150%;
+    }
+
+    .rustico-scroll3 .scroll3-left .left-title{
+        margin-top: 2rem;
+    }
+
+    .rustico-scroll3 .scroll3-left .left-title .ani-bg,
+    .rustico-scroll3 .scroll3-left .left-title .rus-mid_ani img:last-child{
+        width: 50%;
+    }
+
+    .rustico-scroll3 .scroll3-left .left-title .ani-bg img{
+        width: 100%;
+    }
+
+    .rustico-scroll3 .scroll3-left .left-title .rus-mid_ani{
+        width: 75%;
+        top: 15%;
+        left: 12%;
+    }
+
+    .rustico-scroll3 .scroll3-left .left-title p{
+        margin-left: 0;
+        font-size: .7rem;
+        margin-top: 5rem;
+    }
+
+    .rustico-scroll3 .scroll3-right{
+        margin-top: 50%;
+    }
+
+    .rustico-scroll3 .scroll3-right .right-img h1{
+        font-size: 2rem;
+        padding: 1rem;
+        bottom: 6rem;
+        letter-spacing: .3rem;
+        width: 186%;
+    }
+}
+
+/* SCROLL4 */
+.rustico-scroll4{
+    background: #435826;;
+    background-image: url(./img/image\ 19\ \(3\).webp);
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.rustico-scroll4 .container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 7rem;
+    position: relative;
+}
+
+.rustico-scroll4 .container .scroll4-left{
+    width: 25%;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #CAB88B;
+    margin-top: 8rem;
+}   
+
+.rustico-scroll4 .container .scroll4-mid{
+    width: 50%;
+}
+
+.rustico-scroll4 .container .scroll4-mid .mid-img{
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+}
+
+.rustico-scroll4 .container .scroll4-mid .mid-img img:first-child{
+    width: 40%;
+    height: 20rem;
+    transform: rotate(-14deg);
+}
+
+.rustico-scroll4 .container .scroll4-mid .mid-img img:last-child{
+    width: 60%;
+    height: 30rem;
+    transform: rotate(12deg);
+}
+
+.rustico-scroll4 .container .scroll4-mid .mid-title img{
+    width: 100%;
+}
+
+.rustico-scroll4 .container .scroll4-mid .mid-title h5{
+    font-weight: 900;
+    color: #F5F5F5;
+    text-align: center;
+    transform: rotate(-18deg);
+    position: absolute;
+    bottom: 4rem;
+    width: 98%;
+    line-height: 1.5;
+    font-size: 1rem;
+}
+
+.rustico-scroll4 .container .scroll4-mid .mid-title{
+    position: absolute;
+    width: 22%;
+    bottom: 8%;
+    left: 36%;
+}
+
+.rustico-scroll4 .container .scroll4-right{
+    width: 25%;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #CAB88B;
+    margin-top: 17rem;
+    text-align: end;
+}
+
+@media (max-width: 992px){
+    .rustico-scroll4 .container{
+        padding-top: 4rem;
+        flex-direction: column;
+    }
+
+    .rustico-scroll4 .container .scroll4-left{
+        width: 80%;
+        margin-top: 1rem;
+        font-size: 1rem;
+    }
+
+    .rustico-scroll4 .container .scroll4-mid{
+        width: 100%;
+        margin: 3rem 0;
+    }
+
+    .rustico-scroll4 .container .scroll4-mid .mid-title {
+        width: 35%;
+        bottom: 17%;
+        left: 25%;
+    }
+
+    .rustico-scroll4 .container .scroll4-mid .mid-title h5{
+        left: 1.2rem;
+        width: 84%;
+    }
+
+    .rustico-scroll4 .container .scroll4-right{
+        width: 80%;
+        margin-top: 1rem;
+        font-size: 1rem;
+        margin-left: 20%;
+    }
+}
+
+@media (max-width: 541px){
+    .rustico-scroll4 .container {
+        padding-top: 1rem;
+    }
+
+    .rustico-scroll4 .container .scroll4-left{
+        font-size: .8rem;
+    }
+
+    .rustico-scroll4 .container .scroll4-mid{
+        margin: 1rem 0;
+    }
+
+    .rustico-scroll4 .container .scroll4-mid .mid-img img:first-child{
+        height: 15rem;
+    }
+
+    .rustico-scroll4 .container .scroll4-mid .mid-img img:last-child{
+        height: 20rem;
+        width: 52%;
+    }
+
+    .rustico-scroll4 .container .scroll4-mid .mid-title h5 {
+        left: 5%;
+        bottom: 2rem;
+        width: 90%;
+        font-size: .5rem;
+    }
+
+    .rustico-scroll4 .container .scroll4-mid .mid-title {
+        width: 33%;
+        bottom: 22%;
+        left: 27%;
+    }
+
+    .rustico-scroll4 .container .scroll4-right{
+        font-size: .8rem;
+    }
+}
